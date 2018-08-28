@@ -1,0 +1,7 @@
+README.md
+setup.py
+jsonpathTransformation/__init__.py
+jsonpathTransformation.egg-info/PKG-INFO
+jsonpathTransformation.egg-info/SOURCES.txt
+jsonpathTransformation.egg-info/dependency_links.txt
+jsonpathTransformation.egg-info/top_level.txt
