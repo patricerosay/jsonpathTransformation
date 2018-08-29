@@ -2,7 +2,7 @@
 
 This script is based on [jsonpath_ng](https://github.com/h2non/jsonpath-ng)
 
-##Use it to transform a file
+## Use it to transform a file
 This script transforms one json into a second json, using a third json file that contains the mapping.
 
 ```
