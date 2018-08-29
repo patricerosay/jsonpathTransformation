@@ -2,8 +2,9 @@
 
 This script is based on [jsonpath_ng](https://github.com/h2non/jsonpath-ng)
 
+
 ## Use it to transform a file
-This script transforms one json into a second json, using a third json file that contains the mapping.
+This json to json transformation script transforms one json into a second json, using a third json file that contains the mapping and the structure of the desired third json.
 
 ```
 jsonpathTransformation.py -i input.json -t transfo.json -o output.json
