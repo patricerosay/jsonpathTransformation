@@ -39,8 +39,10 @@ output.json
 } 
 ```
 ## Use it to check your jsonpath syntax
+execute the command line
 ```
 jsonpathTransformation.py -i input.json -e $.smartData.producer
-
-returns
+```
+will return
+```
 r2d2
