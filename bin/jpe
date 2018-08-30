@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+
+import jsonpathTransformation
+def get_parser():
+    from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
+    parser = ArgumentParser(description=__doc__,
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument("-i", "--input",
+                        dest="json_filepath",
+                        help="JSON FILE to read",
+                        metavar="FILE",
+                        required=True)
+
+    parser.add_argument("-e", "--expression",
+                        dest="jsonPathExpression",
+                        help="the jsonPath expression ",
+                        required=True)
+
+    return parser
+args = get_parser().parse_args()
+
+jsonpathTransformation.extractFromFileJsonPathExpression(args.json_filepath, args.jsonPathExpression , True  )

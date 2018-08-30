@@ -36,7 +36,7 @@ def extractFromFileJsonPathExpression(json_filepath, jsonPathExpression, verbose
 
     with open(json_filepath, encoding='utf-8') as data_file:
         data = json.loads(data_file.read())
-    res = parseJsonPathExpression(data_file, jsonPathExpression)
+    res = parseJsonPathExpression(data, jsonPathExpression)
     if verbose:
         print(res)
     return res
@@ -151,46 +151,8 @@ def main(json_filepath, jsonPathExpression, jsonPathTransformationFile, outputFi
         print("Error")
 
 
-def get_parser():
-    from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
-    parser = ArgumentParser(description=__doc__,
-                            formatter_class=ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument("-i", "--input",
-                        dest="json_filepath",
-                        help="JSON FILE to read",
-                        metavar="FILE",
-                        required=True)
-
-    parser.add_argument("-e", "--expression",
-                        dest="jsonPathExpression",
-                        help="the jsonPath expression ",
-                        required=False)
-
-    parser.add_argument("-t", "--transformation",
-                        dest="jsonPathTransformationFile",
-                        help="the jsonPath transformation file  ",
-                        required=False)
-
-    parser.add_argument("-o", "--outputFile",
-                        dest="outputFile",
-                        help="the json output file",
-                        required=False)
-    parser.add_argument("-v", "--verbose",
-                        dest="verbose",
-                        help="print jsonpath result ",
-                        default=False,
-                        required=False)
-    return parser
 
 errorCount = 0
 lineCount = 0
-if __name__ == "__main__":
-    
 
-    args = get_parser().parse_args()
-    main(args.json_filepath,
-         args.jsonPathExpression,
-         args.jsonPathTransformationFile,
-         args.outputFile,
-         args.verbose)

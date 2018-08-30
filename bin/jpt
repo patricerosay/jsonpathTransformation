@@ -1,9 +1,34 @@
 #!/usr/bin/env python
 
 import jsonpathTransformation
-args = jsonpathTransformation.get_parser().parse_args()
-parseJsonPathTransformationFile(args.json_filepath, 
-    args.jsonPathExpression, 
+def get_parser():
+    from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
+    parser = ArgumentParser(description=__doc__,
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument("-i", "--input",
+                        dest="json_filepath",
+                        help="JSON FILE to read",
+                        metavar="FILE",
+                        required=True)
+
+    parser.add_argument("-t", "--transformation",
+                        dest="jsonPathTransformationFile",
+                        help="the jsonPath transformation file  ",
+                        required=True)
+
+    parser.add_argument("-o", "--outputFile",
+                        dest="outputFile",
+                        help="the json output file",
+                        required=True)
+    parser.add_argument("-v", "--verbose",
+                        dest="verbose",
+                        help="print jsonpath result ",
+                        default=False,
+                        required=False)
+    return parser
+args = get_parser().parse_args()
+jsonpathTransformation.parseJsonPathTransformationFile(args.json_filepath, 
     args.jsonPathTransformationFile,
     args.outputFile,
     args.verbose )  
