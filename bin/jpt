@@ -2,7 +2,7 @@
 
 import jsonpathTransformation
 args = jsonpathTransformation.get_parser().parse_args()
-main(args.json_filepath, 
+parseJsonPathTransformationFile(args.json_filepath, 
     args.jsonPathExpression, 
     args.jsonPathTransformationFile,
     args.outputFile,

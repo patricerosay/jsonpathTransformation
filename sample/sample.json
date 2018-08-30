@@ -1,1 +1,17 @@
-{"header": {"creationDate": "2018-05-29T12:41:08,306+02:00","updateDate": "2018-05-29T12:41:08,306+02:00", "producer": "vt1","versionSchema": "null"},"smartData": {"label": "%00004410012500000016906834250","zipCode": "000044100","itemId": "12500000016906","itemIdCCKey": "A","serviceCode": "834","countryCode": "250","LetterUUID": "7edb06eb-2298-34b9-a9f5-cf47f645a6b6"}	}
+{
+    "header": {
+        "creationDate": "2018-05-29T12:41:08,306+02:00",
+        "updateDate": "2018-05-29T12:41:08,306+02:00",
+        "producer": "vt1",
+        "versionSchema": "null"
+    },
+    "smartData": {
+        "label": "%00004410012500000016906834250",
+        "zipCode": "000044100",
+        "itemId": "12500000016906",
+        "itemIdCCKey": "A",
+        "serviceCode": "834",
+        "countryCode": "250",
+        "LetterUUID": "7edb06eb-2298-34b9-a9f5-cf47f645a6b6"
+    }
+}

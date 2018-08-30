@@ -1,1 +1,6 @@
-{"data": {"uuid": "$.smartData.LetterUUID","UUID": "$.smartData.itemId"}}
+{
+    "data": {
+        "uuid": "$.smartData.LetterUUID",
+        "item": "$.smartData.itemId"
+    }
+}

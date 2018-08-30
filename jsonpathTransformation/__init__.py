@@ -1,2 +1,2 @@
 name = "jsonpathTransformation"
-from .jsonpathTransformation import main, get_parser
+from .jsonpathTransformation import main, get_parser,parseJsonPathTransformationFile,parseJsonPathExpression

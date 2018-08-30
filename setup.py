@@ -25,7 +25,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "json",
     ),
-    scripts=['bin/jsonpathTransformation'],
+    scripts=['bin/jpt'],
     include_package_data=True,
     zip_safe=False
 )
