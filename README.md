@@ -3,9 +3,10 @@
 This script is based on [jsonpath_ng](https://github.com/h2non/jsonpath-ng)
 
 ## Installation:
-Download or clone this git project
-cd into the jsonpathTransformation folder
-execute pip install .
+- Download or clone this git project
+- cd into the jsonpathTransformation folder
+- execute pip install .
+
 you're all set
 
 ## Use it to transform a file
