@@ -2,6 +2,11 @@
 
 This script is based on [jsonpath_ng](https://github.com/h2non/jsonpath-ng)
 
+## Installation:
+Download or clone this git project
+cd into the jsonpathTransformation folder
+execute pip install .
+you're all set
 
 ## Use it to transform a file
 This json to json transformation script transforms one json into a second json, using a third json file that contains the mapping and the structure of the desired third json.
