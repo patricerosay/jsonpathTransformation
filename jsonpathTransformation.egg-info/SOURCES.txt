@@ -1,7 +1,10 @@
 README.md
-setup.py
+bin/jsonpathTransformation
 jsonpathTransformation/__init__.py
+jsonpathTransformation/jsonpathTransformation.py
 jsonpathTransformation.egg-info/PKG-INFO
 jsonpathTransformation.egg-info/SOURCES.txt
 jsonpathTransformation.egg-info/dependency_links.txt
+jsonpathTransformation.egg-info/not-zip-safe
+jsonpathTransformation.egg-info/requires.txt
 jsonpathTransformation.egg-info/top_level.txt

@@ -1,18 +1,61 @@
 Metadata-Version: 2.1
 Name: jsonpathTransformation
 Version: 0.0.1
-Summary: A small example package
-Home-page: https://github.com/pypa/sampleproject
-Author: Example Author
-Author-email: author@example.com
-License: UNKNOWN
-Description: # Example Package
+Summary: A simple json to json transformation tool
+Home-page: https://github.com/patricerosay/jsonpathTransformation
+Author: Bepeho
+Author-email: contact@bepeho.Com
+License: MIT
+Description: # jsonpath transformation
         
-        This is a simple example package. You can use
-        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-        to write your content.
+        This script is based on [jsonpath_ng](https://github.com/h2non/jsonpath-ng)
+        
+        ##Use it to transform a file
+        This script transforms one json into a second json, using a third json file that contains the mapping.
+        
+        ```
+        jsonpathTransformation.py -i input.json -t transfo.json -o output.json
+        input.json
+        {
+            "creationDate": "2018-05-29T12:41:08,306+02:00",
+            "id": "7edb06eb-2298-34b9-a9f5-cf47f645a6b6", 
+            "smartdata":
+            {
+                "producer": "r2d2"
+            }
+            "versionSchema": "null"
+        }
+        transfo.json
+        {
+            "data": 
+                {
+                    "uuid": "$.id",
+                    "producer": "$.smartData.producer"
+                }
+        }
+        ```
+        will generate the file:
+        
+        ```
+        output.json
+        {
+            "data": 
+                {
+                    "uuid": "7edb06eb-2298-34b9-a9f5-cf47f645a6b6", 
+                    "producer": "r2d2"
+                }
+        } 
+        ```
+        ## Use it to check your jsonpath syntax
+        ```
+        jsonpathTransformation.py -i input.json -e $.smartData.producer
+        
+        returns
+        r2d2
+        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
+Classifier: json
 Description-Content-Type: text/markdown

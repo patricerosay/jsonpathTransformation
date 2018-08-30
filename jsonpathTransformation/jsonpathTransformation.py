@@ -137,11 +137,7 @@ def main(json_filepath, jsonPathExpression,jsonPathTransformationFile,outputFile
         parseJsonPathTransformationFile(json_filepath, jsonPathTransformationFile, outputFile,verbose )
     else : parseJsonPathTransformationFile("C:\\Users\\xjmu495\\git\\jsonTest\\u6\\d.json", "C:\\Users\\xjmu495\\git\\mapping\\u6\\d.json",None, True)
 
-
-
-if __name__ == "__main__":
-    lineCount=0
-    errorCount=0
+def get_parser():
     from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
     parser = ArgumentParser(description=__doc__,
                                 formatter_class=ArgumentDefaultsHelpFormatter)
@@ -170,13 +166,15 @@ if __name__ == "__main__":
                             dest="verbose",
                             help="print jsonpath result ",
                             default=False,
-                            required=False)     
-    if parser.parse_args().json_filepath is None :
-        _test()
-    else :
-        main(parser.parse_args().json_filepath, 
-        parser.parse_args().jsonPathExpression, 
-        parser.parse_args().jsonPathTransformationFile,
-        parser.parse_args().outputFile,
-        parser.parse_args().verbose )                                  
+                            required=False) 
+    
+if __name__ == "__main__":
+
+
+    args = get_parser().parse_args()
+    main(args.json_filepath, 
+    args.jsonPathExpression, 
+    args.jsonPathTransformationFile,
+    args.outputFile,
+    args.verbose )                                  
   
