@@ -167,6 +167,7 @@ def get_parser():
                             help="print jsonpath result ",
                             default=False,
                             required=False) 
+    return parser
     
 if __name__ == "__main__":
 
